@@ -36,7 +36,7 @@ disneyland-responsive-website/
 
 👩🏻‍💻 Author
 
-Melina
+Melina jodat
 Frontend Developer 🎀
 
 ⭐ Thanks for visiting!
