@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/output.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!--  TOP BAR                                               -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div class="bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-9">
+
+        <!-- چپ: Visit Disney.com -->
+        <a href="#" class="text-[#113CCF] text-xs font-semibold hover:underline">
+          Visit Disney.com
+        </a>
+
+        <!-- راست -->
+        <div class="flex items-center gap-4 text-xs">
+
+          <!-- United States -->
+          <a href="#" class="flex items-center gap-1 text-gray-500 hover:text-gray-900 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="font-semibold">United States (English)</span>
+          </a>
+
+          <span class="text-gray-300">|</span>
+
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors font-semibold">
+            Help
+          </a>
+
+          <div class="relative hidden sm:block">
+            <input type="text" placeholder="Search or ask a question"
+              class="bg-gray-50 border border-gray-200 rounded-full px-8 py-1.5 text-xs w-52 focus:outline-none focus:border-gray-400 text-gray-600 placeholder-gray-400">
+            <svg class="w-4 h-4 text-gray-400 absolute left-3 top-1.5" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!--  MAIN NAV                                              -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex items-center h-16 gap-4">
+
+        <!-- چپ: همبرگر (موبایل) + لوگو -->
+        <div class="flex items-center gap-4 flex-shrink-0">
+          <button type="button"
+            class="lg:hidden p-2 rounded-full text-gray-700 cursor-pointer hover:bg-gray-100 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <a href="#" class="flex-shrink-0">
+            <img src="assets/images/hero/Asset 4.svg" alt="Disneyland Resort" class="h-10 w-auto">
+          </a>
+        </div>
+
+        <!-- ════════════════════════════════════════════════════════ -->
+        <!--  DESKTOP NAV LINKS — ALL TOGETHER IN ONE FLEX CONTAINER  -->
+        <!-- ════════════════════════════════════════════════════════ -->
+        <div class="hidden lg:flex flex-1 items-center justify-center gap-1">
+
+          <!-- Tickets & Parks -->
+          <div class="group relative h-16 flex items-center">
+            <!-- bg hover effect — pointer-events-none so it never blocks hover -->
+            <div
+              class="absolute inset-x-0 top-0 h-[calc(100%+2px)] bg-white rounded-t-lg border border-gray-200 border-b-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 -z-10 pointer-events-none">
+            </div>
+
+            <a href="#"
+              class="font-heading font-medium text-sm text-gray-800 group-hover:text-disney-blue transition-colors px-4 whitespace-nowrap h-full flex items-center">
+              Tickets & Parks
+            </a>
+
+            <!-- Dropdown — centered under the link, top-full touches the nav bottom -->
+            <div
+              class="hidden group-hover:block absolute top-full left-1/2 -translate-x-1/2 w-[520px] max-w-[95vw] bg-white shadow-xl rounded-b-lg z-50 overflow-hidden border border-gray-200 border-t-0">
+              <div class="grid grid-cols-[1fr_300px]">
+
+                <!-- Left Column -->
+                <div class="p-5">
+
+                  <!-- Tickets & Passes -->
+                  <div class="mb-4">
+                    <h3 class="font-heading font-bold text-sm text-gray-900 mb-2">Tickets & Passes</h3>
+                    <ul class="space-y-1.5">
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Buy
+                          Theme Park Tickets</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">View
+                          Offers & Discounts</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Buy
+                          Special Event Tickets</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Buy
+                          Theme Park Parking</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Buy
+                          Magic Key Passes</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Theme
+                          Park Reservations</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Change
+                          Theme Park Tickets</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Plan Your Visit -->
+                  <div>
+                    <h3 class="font-heading font-bold text-sm text-gray-900 mb-2">Plan Your Visit</h3>
+                    <ul class="space-y-1.5">
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Explore
+                          Disneyland Vacations</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Lightning
+                          Lane Passes</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Events
+                          Calendar</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Maps</a>
+                      </li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Directions</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="bg-[#E8F4FD] p-5">
+                  <h3 class="font-heading font-bold text-base text-gray-900 mb-2">Explore Our Parks</h3>
+                  <a href="#" class="text-sm text-disney-blue hover:underline block mb-1 whitespace-nowrap">See All
+                    Hours & Entertainment Schedule</a>
+                  <p class="text-xs text-gray-500 mb-4">Park Hours for Tuesday, September 1, 2026</p>
+
+                  <div class="mb-4">
+                    <div class="flex items-start gap-2 mb-1">
+                      <svg class="w-5 h-5 text-gray-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 9v2h2v11h7v-7h2v7h7V11h2V9L12 2zm0 2.5L18.5 9H5.5L12 4.5z" />
+                      </svg>
+                      <a href="#"
+                        class="text-sm font-semibold text-disney-blue hover:underline whitespace-nowrap">Disneyland
+                        Park</a>
+                    </div>
+                    <p class="text-xs text-gray-600 pl-7">8:00 AM to 10:00 PM</p>
+                  </div>
+
+                  <div>
+                    <div class="flex items-start gap-2 mb-1">
+                      <svg class="w-5 h-5 text-gray-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+                        <circle cx="12" cy="12" r="1.5" />
+                      </svg>
+                      <a href="#"
+                        class="text-sm font-semibold text-disney-blue hover:underline whitespace-nowrap">Disney
+                        California Adventure Park</a>
+                    </div>
+                    <p class="text-xs text-gray-600 pl-7">8:00 AM to 6:00 PM</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Places to Stay -->
+          <a href="#"
+            class="font-heading font-medium text-sm text-gray-800 hover:text-disney-blue transition-colors px-4 whitespace-nowrap h-full flex items-center">
+            Places to Stay
+          </a>
+
+          <!-- Things to Do -->
+          <a href="#"
+            class="font-heading font-medium text-sm text-gray-800 hover:text-disney-blue transition-colors px-4 whitespace-nowrap h-full flex items-center">
+            Things to Do
+          </a>
+
+          <!-- Magic Key -->
+          <a href="#"
+            class="font-heading font-medium text-sm text-gray-800 hover:text-disney-blue transition-colors px-4 whitespace-nowrap h-full flex items-center">
+            Magic Key
+          </a>
+
+          <!-- Shop -->
+          <div class="group relative h-16 flex items-center">
+            <div
+              class="absolute inset-x-0 top-0 h-[calc(100%+2px)] bg-white rounded-t-lg border border-gray-200 border-b-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 -z-10 pointer-events-none">
+            </div>
+
+            <a href="#"
+              class="font-heading font-medium text-sm text-gray-800 group-hover:text-disney-blue transition-colors px-4 whitespace-nowrap h-full flex items-center">
+              Shop
+            </a>
+
+            <div
+              class="hidden group-hover:block absolute top-full left-1/2 -translate-x-1/2 w-[640px] max-w-[95vw] bg-white shadow-xl rounded-b-lg z-50 overflow-hidden border border-gray-200 border-t-0">
+              <div class="grid grid-cols-[200px_1fr]">
+
+                <!-- Left -->
+                <div class="bg-[#E8F4FD] p-4 flex flex-col">
+                  <h3 class="font-heading font-bold text-sm text-gray-900 mb-3">Shop the Stories You Love</h3>
+                  <div class="mb-3 overflow-hidden bg-gray-200 rounded">
+                    <img src="assets/images/hero/submenu/DLR_PixarPier_2024-02-02_small-1x1.jpg" alt=""
+                      class="object-cover h-28 w-full">
+                  </div>
+                  <p class="text-xs text-gray-700 leading-relaxed mb-3">
+                    The official online home for every Disney, Pixar & Star Wars fan in your family.
+                  </p>
+                  <a href="#" class="text-disney-blue font-semibold text-sm hover:underline whitespace-nowrap">
+                    Disney Store
+                  </a>
+                </div>
+
+                <!-- Right -->
+                <div class="grid grid-cols-2 gap-5 p-5 items-start">
+                  <div>
+                    <h3 class="font-heading font-bold text-sm text-gray-900 mb-2">Merchandise</h3>
+                    <ul class="space-y-1.5">
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">New
+                          Arrivals</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Authentic
+                          Custom T-Shirts</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">All
+                          Parks Products</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Disney
+                          Gift Card</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 class="font-heading font-bold text-sm text-gray-900 mb-2">Locations</h3>
+                    <ul class="space-y-1.5">
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">All
+                          Disneyland Shops</a></li>
+                      <li><a href="#"
+                          class="text-sm text-gray-600 hover:text-disney-blue transition-colors whitespace-nowrap">Downtown
+                          Disney Shops</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Cart -->
+          <a href="#"
+            class="font-heading font-medium text-sm text-gray-800 hover:text-disney-blue transition-colors flex items-center gap-1.5 px-4 whitespace-nowrap h-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            Cart
+          </a>
+
+          <!-- My Disneyland -->
+          <a href="#"
+            class="font-heading font-medium text-sm text-gray-800 hover:text-disney-blue transition-colors px-4 whitespace-nowrap h-full flex items-center">
+            My Disneyland
+          </a>
+
+        </div>
+
+        <!-- راست موبایل: Tickets + Search -->
+        <div class="flex items-center gap-2 lg:hidden ml-auto">
+          <a href="#"
+            class="bg-[#113CCF] text-white font-heading font-semibold text-sm px-5 py-2 rounded-full hover:bg-[#01147C] transition-colors">
+            Tickets
+          </a>
+          <a href="./search.html" class="p-2 rounded-full text-gray-700 hover:bg-gray-100 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- --اhero-- -->
+
+  <section class="w-full h-[500px] sm:h-[550px] lg:h-[600px] overflow-hidden relative">
+
+
+
+
+    <div class="h-full">
+
+      <video autoplay muted loop playsinline class="w-full h-full object-cover" poster="assets/images/hero/poster.jpg"
+        src="assets/video/FY26-DLR-DOM-Halloween-Time-Website-Cinemagraphs-Digital-Banners-Web.webm">
+
+      </video>
+
+    </div>
+
+    <!-- overlay -->
+
+    <div class=" absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/40 to-black/20">
+
+    </div>
+
+    <!-- content// -->
+
+    <div
+      class=" absolute inset-0 z-20 h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
+
+      <h1
+        class="font-display text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-white text-shadow mb-4 leading-tight max-w-4xl">
+
+        Celebrate Halloween Time at the Disneyland Resort!
+
+      </h1>
+
+
+
+      <p class="font-heading font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white text-shadow mb-8">
+        Now through October 31, 2026
+
+      </p>
+
+
+
+      <div class=" flex flex-col  items-center justify-center gap-5 sm:flex-row sm:w-auto mt-3">
+
+        <a href="#" class="btn-hero">
+          Find Out More
+        </a>
+
+        <a href="#" class="btn-hero">
+          Get Park Tickets
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!--  DIVIDER — خط + ستاره + خط                              -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center gap-4 py-4 lg:py-8">
+
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+
+        <svg class="w-6 h-6 text-disney-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z" />
+        </svg>
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--  EXPLORE OFFERS & MORE-->
+
+  <section class="py-12 sm:py-16 lg:py-20 bg-white">
+
+
+
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
+
+      <!-- section-title// -->
+
+      <h2 class="section-title">
+        Explore Offers & More
+      </h2>
+
+
+      <!-- sectin1// -->
+
+      <div class=" flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-12 mb-12 lg:mb-20">
+
+        <!-- img// -->
+        <div class="feature-img lg:w-1/2">
+          <img src="assets/images/hero/explore/1.webp" alt="Kids enjoying Dumbo ride at Disneyland">
+        </div>
+
+        <!-- content// -->
+
+        <div class="w-full lg:w-1/2 flex flex-col items-start">
+
+
+          <h3 class="feature-title">
+            $50 Kids' Summer Ticket Offer – Ends Soon!
+          </h3>
+          <p class="feature-desc">
+            Kids ages 3 to 9 can enjoy both theme parks for just $50 with a
+            special 1-Day Park Hopper Ticket. Hurry—offer ends September 3!
+          </p>
+
+
+          <!-- button// -->
+
+          <div class="w-full flex flex-col items-center lg:items-start">
+            <a href="#" class="btn-teal mb-4">Get Offer Details</a>
+            <a href="#" class="link-blue">View All Offers</a>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+
+      <!-- setion2// -->
+
+      <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
+
+        <div class="feature-img lg:w-1/2">
+          <img src="assets/images/hero/explore/2.webp" alt="Magic Key Annual Pass with Pixar Pier Ferris Wheel">
+        </div>
+
+        <div class="w-full lg:w-1/2 flex flex-col items-start">
+          <h3 class="feature-title">
+            Unlock a Year of Magic
+          </h3>
+          <p class="feature-desc">
+            Visit again and again—enjoying discounts and passholder perks
+            throughout the year with a Magic Key annual pass.
+          </p>
+
+          <a href="#" class="btn-teal">
+            Shop Magic Key Passes
+          </a>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!--  DIVIDER — خط + ستاره + خط                              -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center gap-4 py-4 lg:py-8">
+
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+
+        <svg class="w-6 h-6 text-disney-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z" />
+        </svg>
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- //get ready for your visit// -->
+
+   <section class="py-12 sm:py-16 lg:py-20 bg-white">
+
+
+
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
+
+      <!-- section-title// -->
+
+      <h2 class="section-title">
+        Get Ready for Your Visit
+      </h2>
+
+
+      <!-- sectin1// -->
+
+      <div class=" flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-12 mb-12 lg:mb-20">
+
+        <!-- img// -->
+        <div class="feature-img lg:w-1/2">
+          <img src="assets/images/hero/explore/3.webp" alt="Disneyland">
+        </div>
+
+        <!-- content// -->
+
+        <div class="w-full lg:w-1/2 flex flex-col items-start">
+
+
+          <h3 class="feature-title">
+            Get Ready for Your Visit
+          </h3>
+
+          <p class="feature-desc">
+           Welcome to the Disneyland Resort—a place where dreams come true, magic surrounds you and families come together to make memories for a lifetime.
+          </p>
+
+
+          <!-- button// -->
+
+         
+            <a href="#" class="btn-teal mb-4">Plan Your Visit</a>
+            
+          
+
+
+        </div>
+
+      </div>
+
+
+
+
+      <!-- setion2// -->
+
+      <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
+
+        <div class="feature-img lg:w-1/2">
+          <img src="assets/images/hero/explore/4.jpg" alt="Ferris Wheel">
+        </div>
+
+        <div class="w-full lg:w-1/2 flex flex-col items-start">
+          <h3 class="feature-title">
+            Skip the Standby Line with Lightning Lane Passes
+          </h3>
+          <p class="feature-desc">
+            Get to the fun faster at select rides so you can get the most out of your day!
+          </p>
+
+          <a href="#" class="btn-teal">
+            Find Out More
+          </a>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+
+   <!-- ════════════════════════════════════════════════════════ -->
+  <!--  DIVIDER — خط + ستاره + خط                              -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center gap-4 py-4 lg:py-8">
+
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+
+        <svg class="w-6 h-6 text-disney-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z" />
+        </svg>
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- ///parks/// -->
+
+
+
+  <!-- ///parks/// -->
+
+<section class="py-12 sm:py-16 lg:py-20 bg-white">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <h2 class="section-title">
+      Discover Magic in Both Parks
+    </h2>
+
+
+    <!-- Parks Grid -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+
+
+      <!-- ───────────── Halloween Time ───────────── -->
+
+      <a
+        href="#"
+        class="park-card group aspect-[4/5] sm:aspect-square lg:aspect-[2.4/1] lg:col-span-3"
+      >
+
+        <div class="park-card-img-wrapper">
+
+          <img
+            src="assets/images/park/1.jpg"
+            alt="Halloween Time"
+            class="park-card-img"
+          >
+
+        </div>
+
+
+        <!-- overlay -->
+
+        <div class="park-card-overlay"></div>
+
+
+        <!-- badge -->
+
+        <div class="park-badge bg-[#D84315]">
+
+          <span class="park-badge-title">
+            Halloween Time
+          </span>
+
+          <span class="park-badge-location">
+
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2L2 9v2h2v11h7v-7h2v7h7V11h2V9L12 2z"/>
+            </svg>
+
+            Disneyland Resort
+
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- ───────────── Plaza de la Familia ───────────── -->
+
+      <a
+        href="#"
+        class="park-card group aspect-[4/5] sm:aspect-square lg:aspect-[4/5]"
+      >
+
+        <div class="park-card-img-wrapper">
+
+          <img
+            src="assets/images/park/2.jpg"
+            alt="Plaza de la Familia"
+            class="park-card-img"
+          >
+
+        </div>
+
+
+        <!-- overlay -->
+
+        <div class="park-card-overlay"></div>
+
+
+        <!-- badge -->
+
+        <div class="park-badge bg-[#C51162]">
+
+          <span class="park-badge-title">
+            Plaza de la Familia
+          </span>
+
+          <span class="park-badge-location">
+
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+
+            Disney California Adventure Park
+
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- ───────────── Haunted Mansion ───────────── -->
+
+      <a
+        href="#"
+        class="park-card group aspect-[4/5] sm:aspect-square lg:aspect-[4/5]"
+      >
+
+        <div class="park-card-img-wrapper">
+
+          <img
+            src="assets/images/park/3.jpg"
+            alt="Haunted Mansion Holiday"
+            class="park-card-img"
+          >
+
+        </div>
+
+
+        <!-- overlay -->
+
+        <div class="park-card-overlay"></div>
+
+
+        <!-- badge -->
+
+        <div class="park-badge bg-[#00695C]">
+
+          <span class="park-badge-title">
+            Haunted Mansion Holiday
+          </span>
+
+          <span class="park-badge-location">
+
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2L2 9v2h2v11h7v-7h2v7h7V11h2V9L12 2z"/>
+            </svg>
+
+            Disneyland Park
+
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- ───────────── Mickey's Trick and Treat ───────────── -->
+
+      <a
+        href="#"
+        class="park-card group aspect-[4/5] sm:aspect-square lg:aspect-[4/5]"
+      >
+
+        <div class="park-card-img-wrapper">
+
+          <img
+            src="assets/images/park/4.jpg"
+            alt="Mickey's Trick and Treat"
+            class="park-card-img"
+          >
+
+        </div>
+
+
+        <!-- overlay -->
+
+        <div class="park-card-overlay"></div>
+
+
+        <!-- badge -->
+
+        <div class="park-badge bg-[#7B1FA2]">
+
+          <span class="park-badge-title">
+            Mickey's Trick and Treat
+          </span>
+
+          <span class="park-badge-location">
+
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+
+            Disney California Adventure Park
+
+          </span>
+
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+ 
+
+
+
+
+
+
+     <!-- ════════════════════════════════════════════════════════ -->
+  <!--  DIVIDER — خط + ستاره + خط                              -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center gap-4 py-4 lg:py-8">
+
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+
+        <svg class="w-6 h-6 text-disney-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z" />
+        </svg>
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- exciting experiences -->
+
+<section class="py-12 sm:py-16 lg:py-20 bg-white">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
+
+    <!-- title -->
+
+    <h2 class="section-title">
+      Exciting Experiences
+    </h2>
+
+
+    <!-- content -->
+
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-12">
+
+      <!-- image -->
+
+      <div class="feature-img lg:w-1/2">
+
+        <img
+          src="assets/images/third/DLR_DCA_DLR70_Happiness_Dessert-Party_03122025_DSC01177DN-16x9.webp"
+          alt="World of Color Dessert Party box with assorted treats"
+        >
+
+      </div>
+
+
+      <!-- content -->
+
+      <div class="w-full lg:w-1/2 flex flex-col items-start">
+
+        <h3 class="feature-title">
+          World of Color Dessert Party
+        </h3>
+
+        <p class="feature-desc">
+          Experience the World of Color show from premium seating in
+          Paradise Gardens Park—while savoring a special assortment of treats.
+        </p>
+
+        <a
+          href="#"
+          class="btn-teal"
+        >
+          Find Out More
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+ <!-- ════════════════════════════════════════════════════════ -->
+  <!--  DIVIDER — خط + ستاره + خط                              -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center gap-4 py-4 lg:py-8">
+
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+
+        <svg class="w-6 h-6 text-disney-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z" />
+        </svg>
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+ <!-- ///plan-play-shop/// -->
+
+<section class="py-12 sm:py-16 lg:py-20 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
+
+        <!-- Section Title -->
+        <h2 class="section-title">
+            Plan, Play & Shop
+        </h2>
+
+
+        <!-- ================= FIRST FEATURE ================= -->
+
+        <div class="flex flex-col md:flex-row items-center gap-6 lg:gap-12 mb-12 lg:mb-20">
+
+            <!-- Image -->
+            <div class="feature-img group w-full md:w-3/5">
+                <img
+                    src="assets/images/fourth/1.jpg"
+                    alt="Lightning Lane Passes"
+                    class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                >
+            </div>
+
+
+            <!-- Content -->
+            <div class="w-full md:w-2/5 flex flex-col items-start">
+
+                <h3 class="feature-title">
+                    Skip the Standby Line with Lightning Lane Passes
+                </h3>
+
+                <p class="feature-desc">
+                    Save time waiting in line so you can enjoy more of your happiest day at the Disneyland Resort!
+                </p>
+
+                <a
+                    href="#"
+                    class="btn-disney w-full md:w-auto border-2 border-disney-blue text-disney-blue bg-white hover:bg-disney-blue hover:text-white px-8 py-3.5 text-sm sm:text-base transition-all duration-200"
+                >
+                    Find Out More
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= THREE CARDS ================= -->
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+
+
+            <!-- CARD 1 -->
+            <article class="group flex flex-col h-full">
+
+                <!-- Image -->
+                <div class="feature-img overflow-hidden">
+                    <img
+                        src="assets/images/fourth/2.avif"
+                        alt="Mobile Order Meals, Drinks & Snacks"
+                        class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                </div>
+
+
+                <!-- Content -->
+                <div class="pt-5 flex flex-col flex-1">
+
+                    <h3 class="feature-title">
+                        Mobile Order Meals, Drinks & Snacks
+                    </h3>
+
+                    <p class="feature-desc">
+                        Order ahead right on the Disneyland app so you can enjoy more fun time and less wait time!
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-disney mt-auto w-full md:w-auto border-2 border-disney-blue text-disney-blue bg-white hover:bg-disney-blue hover:text-white px-8 py-3.5 text-sm sm:text-base transition-all duration-200"
+                    >
+                        Find Out More
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CARD 2 -->
+            <article class="group flex flex-col h-full">
+
+                <!-- Image -->
+                <div class="feature-img overflow-hidden">
+                    <img
+                        src="assets/images/fourth/3.avif"
+                        alt="Disney PhotoPass Service"
+                        class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                </div>
+
+
+                <!-- Content -->
+                <div class="pt-5 flex flex-col flex-1">
+
+                    <h3 class="feature-title">
+                        Disney PhotoPass Service: Focus on the Fun!
+                    </h3>
+
+                    <p class="feature-desc">
+                        Let our photographers turn family moments into memories—while getting everyone in the picture!
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-disney mt-auto w-full md:w-auto border-2 border-disney-blue text-disney-blue bg-white hover:bg-disney-blue hover:text-white px-8 py-3.5 text-sm sm:text-base transition-all duration-200"
+                    >
+                        Find Out More
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CARD 3 -->
+            <article class="group flex flex-col h-full">
+
+                <!-- Image -->
+                <div class="feature-img overflow-hidden">
+                    <img
+                        src="assets/images/fourth/4.avif"
+                        alt="Disneyland Collection"
+                        class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                </div>
+
+
+                <!-- Content -->
+                <div class="pt-5 flex flex-col flex-1">
+
+                    <h3 class="feature-title">
+                        Begin Your Adventure with Disney+
+                    </h3>
+
+                    <p class="feature-desc">
+                        Before you experience Disney favourites in the parks, share them together at home.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-disney mt-auto w-full md:w-auto border-2 border-disney-blue text-disney-blue bg-white hover:bg-disney-blue hover:text-white px-8 py-3.5 text-sm sm:text-base transition-all duration-200"
+                    >
+                        Explore Disney+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+ <!-- ════════════════════════════════════════════════════════ -->
+  <!--  DIVIDER — خط + ستاره + خط                              -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center gap-4 py-4 lg:py-8">
+
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+
+        <svg class="w-6 h-6 text-disney-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z" />
+        </svg>
+
+
+        <div class="h-px bg-gray-300 flex-1 max-w-[100px] sm:max-w-[260px] lg:max-w-[420px]"></div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+<footer class="bg-white text-[#18375A]">
+
+   
+
+    <!-- ================= PLAN DISNEY ================= -->
+
+    <div class="px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 lg:pt-14">
+
+        <a
+            href="https://plandisney.disney.go.com/"
+            class="group block max-w-3xl mx-auto"
+        >
+
+            <div
+                class="relative overflow-hidden rounded-2xl bg-[#E8FBFD] min-h-[150px] flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 px-6 py-8 text-center"
+            >
+
+                <!-- Decorative Icon Left -->
+                <div class="absolute left-4 top-2 text-[#C9F3F8] text-6xl opacity-80">
+                    💬
+                </div>
+
+                <!-- Text -->
+                <div class="relative z-10">
+
+                    <p class="font-heading font-bold text-lg sm:text-xl text-[#062B49]">
+                        Have Questions?
+                    </p>
+
+                    <p class="mt-2 font-sans text-base sm:text-lg text-[#062B49]">
+                        Connect with a
+                        <span class="text-[#0077C8] group-hover:underline">
+                            planDisney panelist
+                        </span>
+                    </p>
+
+                </div>
+
+
+                <!-- planDisney Logo -->
+                <div class="relative z-10 shrink-0">
+
+                    <img
+                        src="https://plandisney.disney.go.com/Content/images/general/planDisney-logo.svg"
+                        alt="planDisney"
+                        class="w-36 sm:w-40 h-auto transition-transform duration-200 group-hover:scale-105"
+                    >
+
+                </div>
+
+
+                <!-- Decorative Icon Right -->
+                <div class="absolute right-4 bottom-0 text-[#C9F3F8] text-6xl opacity-80">
+                    💬
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- ================= MOBILE / TABLET LINK TOGGLE ================= -->
+
+    <div class="px-4 sm:px-6 lg:px-8 mt-10 lg:hidden">
+
+        <details class="group border border-gray-300 rounded-lg">
+
+            <summary
+                class="list-none cursor-pointer flex items-center gap-4 px-6 py-6 font-heading font-bold text-xl text-[#18375A]"
+            >
+
+                <!-- Arrow -->
+                <span class="text-2xl transition-transform duration-200 group-open:rotate-90">
+                    ▶
+                </span>
+
+                <span>
+                    Show More Links
+                </span>
+
+            </summary>
+
+
+            <!-- Links opened on Mobile / Tablet -->
+            <div class="px-6 pb-8 pt-2 space-y-8">
+
+                <!-- Help -->
+                <div>
+                    <h3 class="font-heading font-bold text-base mb-4">
+                        Help
+                    </h3>
+
+                    <div class="flex flex-col gap-3 text-sm">
+                        <a href="#" class="footer-link">Help Centre</a>
+                        <a href="#" class="footer-link">Phone Directory</a>
+                        <a href="#" class="footer-link">Email</a>
+                        <a href="#" class="footer-link">Property Rules</a>
+                        <a href="#" class="footer-link">planDisney</a>
+                    </div>
+                </div>
+
+
+                <!-- Guest Services -->
+                <div>
+                    <h3 class="font-heading font-bold text-base mb-4">
+                        Guest Services
+                    </h3>
+
+                    <div class="flex flex-col gap-3 text-sm">
+                        <a href="#" class="footer-link">
+                            Services for Guests with Disabilities
+                        </a>
+
+                        <a href="#" class="footer-link">
+                            Custom Parties & Events
+                        </a>
+
+                        <a href="#" class="footer-link">
+                            All Guest Services
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Parks and Tickets -->
+                <div>
+                    <h3 class="font-heading font-bold text-base mb-4">
+                        Parks and Tickets
+                    </h3>
+
+                    <div class="flex flex-col gap-3 text-sm">
+                        <a href="#" class="footer-link">
+                            Disneyland Park
+                        </a>
+
+                        <a href="#" class="footer-link">
+                            Disney California Adventure Park
+                        </a>
+
+                        <a href="#" class="footer-link">
+                            Park Hours
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Get Ready -->
+                <div>
+                    <h3 class="font-heading font-bold text-base mb-4">
+                        Get Ready
+                    </h3>
+
+                    <div class="flex flex-col gap-3 text-sm">
+                        <a href="#" class="footer-link">
+                            Mobile App
+                        </a>
+
+                        <a href="#" class="footer-link">
+                            Getting to the Disneyland Resort
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Dining -->
+                <div>
+                    <h3 class="font-heading font-bold text-base mb-4">
+                        Dining
+                    </h3>
+
+                    <div class="flex flex-col gap-3 text-sm">
+                        <a href="#" class="footer-link">
+                            Make Dining Reservations
+                        </a>
+
+                        <a href="#" class="footer-link">
+                            My Dining Reservations
+                        </a>
+
+                        <a href="#" class="footer-link">
+                            Character Dining
+                        </a>
+
+                        <a href="#" class="footer-link">
+                            All Dining
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </details>
+
+    </div>
+
+
+
+    <!-- ================= DESKTOP MAIN LINKS ================= -->
+
+    <div class="hidden lg:block max-w-5xl mx-auto px-8 pt-12 pb-8">
+
+        <div class="grid grid-cols-4 gap-12">
+
+            <!-- Help -->
+            <div>
+                <h3 class="font-heading font-bold text-base mb-4">
+                    Help
+                </h3>
+
+                <div class="flex flex-col gap-3 text-sm">
+                    <a href="#" class="footer-link">Help Centre</a>
+                    <a href="#" class="footer-link">Phone Directory</a>
+                    <a href="#" class="footer-link">Email</a>
+                    <a href="#" class="footer-link">Property Rules</a>
+                    <a href="#" class="footer-link">planDisney</a>
+                </div>
+            </div>
+
+
+            <!-- Guest Services -->
+            <div>
+                <h3 class="font-heading font-bold text-base mb-4">
+                    Guest Services
+                </h3>
+
+                <div class="flex flex-col gap-3 text-sm">
+                    <a href="#" class="footer-link">
+                        Services for Guests with Disabilities
+                    </a>
+
+                    <a href="#" class="footer-link">
+                        Custom Parties & Events
+                    </a>
+
+                    <a href="#" class="footer-link">
+                        All Guest Services
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Parks -->
+            <div>
+
+                <h3 class="font-heading font-bold text-base mb-4">
+                    Parks and Tickets
+                </h3>
+
+                <div class="flex flex-col gap-3 text-sm">
+                    <a href="#" class="footer-link">
+                        Disneyland Park
+                    </a>
+
+                    <a href="#" class="footer-link">
+                        Disney California Adventure Park
+                    </a>
+
+                    <a href="#" class="footer-link">
+                        Park Hours
+                    </a>
+                </div>
+
+
+                <h3 class="font-heading font-bold text-base mt-6 mb-4">
+                    Get Ready
+                </h3>
+
+                <div class="flex flex-col gap-3 text-sm">
+                    <a href="#" class="footer-link">
+                        Mobile App
+                    </a>
+
+                    <a href="#" class="footer-link">
+                        Getting to the Disneyland Resort
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Dining -->
+            <div>
+
+                <h3 class="font-heading font-bold text-base mb-4">
+                    Dining
+                </h3>
+
+                <div class="flex flex-col gap-3 text-sm">
+                    <a href="#" class="footer-link">
+                        Make Dining Reservations
+                    </a>
+
+                    <a href="#" class="footer-link">
+                        My Dining Reservations
+                    </a>
+
+                    <a href="#" class="footer-link">
+                        Character Dining
+                    </a>
+
+                    <a href="#" class="footer-link">
+                        All Dining
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= DESKTOP NAV BAR ================= -->
+
+    <div class="hidden lg:block border-y border-gray-200 shadow-sm">
+
+        <div class="max-w-5xl mx-auto px-8">
+
+            <div class="flex items-center gap-8 py-3">
+
+                <span class="font-display text-2xl text-[#18375A]">
+                    Disneyland
+                </span>
+
+                <a href="#" class="footer-nav-link">
+                    Tickets and Parks
+                </a>
+
+                <a href="#" class="footer-nav-link">
+                    Places to Stay
+                </a>
+
+                <a href="#" class="footer-nav-link">
+                    Things to Do
+                </a>
+
+                <a href="#" class="footer-nav-link">
+                    Magic Key
+                </a>
+
+                <a href="#" class="footer-nav-link">
+                    🛒 Cart
+                </a>
+
+                <a href="#" class="footer-nav-link">
+                    My Disneyland
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= SOCIAL / INFO ================= -->
+
+    <div class="hidden lg:block max-w-5xl mx-auto px-8 py-6">
+
+        <div class="grid grid-cols-3 gap-12">
+
+            <!-- Stay Connected -->
+           <!-- Stay Connected -->
+<div>
+
+    <h3 class="font-heading font-bold text-base mb-4">
+        Stay Connected
+    </h3>
+
+    <div class="flex items-center gap-5">
+
+        <!-- Facebook -->
+        <a
+            href="#"
+            class="social-link"
+            aria-label="Facebook"
+        >
+            <svg
+                class="w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+            >
+                <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v6h4v-6h3.2l.8-4H13V9c0-.7.3-1 1-1Z"/>
+            </svg>
+        </a>
+
+
+        <!-- X -->
+        <a
+            href="#"
+            class="social-link"
+            aria-label="X"
+        >
+            <svg
+                class="w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+            >
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.964 6.817H1.684l7.73-8.835L1.26 2.25h6.826l4.713 6.231 5.445-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
+            </svg>
+        </a>
+
+
+        <!-- Instagram -->
+        <a
+            href="#"
+            class="social-link"
+            aria-label="Instagram"
+        >
+            <svg
+                class="w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+            >
+                <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                />
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                />
+
+                <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                />
+            </svg>
+        </a>
+
+    </div>
+
+</div>
+
+
+            <!-- Disney Parks -->
+            <!-- Disney Parks -->
+<div>
+
+    <h3 class="font-heading font-bold text-base mb-4">
+        Disney Parks
+    </h3>
+
+    <div class="flex flex-col gap-3 text-sm">
+
+        <!-- YouTube Channel -->
+        <a
+            href="#"
+            class="footer-link flex items-center gap-2"
+        >
+
+            <svg
+                class="w-5 h-5 shrink-0 text-[#E41B13]"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+            >
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/>
+            </svg>
+
+            <span>
+                YouTube Channel
+            </span>
+
+        </a>
+
+
+        <!-- Blog -->
+        <a
+            href="#"
+            class="footer-link flex items-center gap-2"
+        >
+
+            <svg
+                class="w-5 h-5 shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+            >
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                />
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                />
+
+            </svg>
+
+            <span>
+                Blog
+            </span>
+
+        </a>
+
+    </div>
+
+</div>
+
+
+            <!-- Stay in the Know -->
+            <div>
+
+                <h3 class="font-heading font-bold text-base mb-4">
+                    Stay in the Know
+                </h3>
+
+                <p class="text-sm leading-relaxed max-w-xs">
+                    Sign up for a MyDisney account to learn about the latest Disney Parks news, special offers and amazing experiences!
+                </p>
+
+                <a
+                    href="#"
+                    class="footer-link inline-block mt-2"
+                >
+                    Create Your MyDisney Account
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= RELATED DISNEY SITES ================= -->
+
+    <div class="hidden lg:block max-w-5xl mx-auto px-8">
+
+        <div class="bg-[#EAF7FC] rounded-2xl px-8 py-7">
+
+            <h3 class="font-heading font-bold text-base mb-5">
+                Related Disney Sites
+            </h3>
+
+
+            <div class="grid grid-cols-4 gap-x-8 gap-y-3 text-sm">
+
+                <a href="#" class="footer-link">Disney Parks</a>
+                <a href="#" class="footer-link">Adventures by Disney</a>
+                <a href="#" class="footer-link">Disney Meetings & Events</a>
+                <a href="#" class="footer-link">In-Room Celebrations</a>
+
+                <a href="#" class="footer-link">Disney Cruise Line</a>
+                <a href="#" class="footer-link">Disney Gift Card</a>
+                <a href="#" class="footer-link">
+                    Disney's Fairy Tale Weddings & Honeymoons
+                </a>
+                <a href="#" class="footer-link">Disney Careers</a>
+
+                <a href="#" class="footer-link">Disney Vacation Club</a>
+                <a href="#" class="footer-link">planDisney</a>
+                <a href="#" class="footer-link">Disney Imagination Campus</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= LEGAL ================= -->
+
+    <div class="px-4 sm:px-6 lg:px-8 py-8 lg:py-7">
+
+        <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 text-sm">
+
+            <a href="#" class="footer-link">
+                Terms of Use
+            </a>
+
+            <a href="#" class="footer-link">
+                Legal Notices
+            </a>
+
+            <a href="#" class="footer-link">
+                Privacy Policy
+            </a>
+
+            <a href="#" class="footer-link">
+                Supplemental Privacy Policy for Canada
+            </a>
+
+            <a href="#" class="footer-link">
+                Interest-Based Ads
+            </a>
+
+        </div>
+
+
+        <p class="text-center text-sm mt-8">
+            © Disney, All Rights Reserved
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+
+
+
+<!-- ================= MY LITTLE MAGIC ================= -->
+
+<section class="my-magic">
+
+  <!-- Background Stars -->
+  <span class="magic-star star-1">✦</span>
+  <span class="magic-star star-2">✧</span>
+  <span class="magic-star star-3">✦</span>
+  <span class="magic-star star-4">✧</span>
+  <span class="magic-star star-5">✦</span>
+  <span class="magic-star star-6">✧</span>
+  <span class="magic-star star-7">✦</span>
+  <span class="magic-star star-8">✧</span>
+  <span class="magic-star star-9">✦</span>
+  <span class="magic-star star-10">✧</span>
+
+
+  <div class="my-magic-inner">
+
+    <!-- Small Title -->
+    <!-- <div class="magic-label">
+      <span>✦</span>
+      <span>MY LITTLE MAGIC</span>
+      <span>✦</span>
+    </div> -->
+
+
+    <div class="my-magic-content">
+
+      <!-- ================= PHOTO ================= -->
+
+      <div class="magic-photo-area">
+
+        <!-- Photo Sparkles -->
+        <span class="photo-glitter pg-1">✦</span>
+        <span class="photo-glitter pg-2">✧</span>
+        <span class="photo-glitter pg-3">✦</span>
+        <span class="photo-glitter pg-4">✧</span>
+        <span class="photo-glitter pg-5">✦</span>
+        <span class="photo-glitter pg-6">✧</span>
+        <span class="photo-glitter pg-7">✦</span>
+        <span class="photo-glitter pg-8">✧</span>
+
+        <!-- Mickey Ears -->
+        <span class="mickey-ear ear-left"></span>
+        <span class="mickey-ear ear-right"></span>
+
+
+        <div class="magic-photo">
+
+          <img
+            src="assets/images/footer/IMG_3642.png.jpeg"
+            alt="Your Name"
+          >
+
+          <div class="magic-photo-shine"></div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= TEXT ================= -->
+
+      <div class="magic-text">
+
+        <h2 class="magic-name">
+          Melina Jodat
+          <span>✦</span>
+        </h2>
+
+
+        <p class="magic-description">
+          Front-End Developer
+          <span class="pink-sparkle">✦</span>
+        </p>
+
+
+        <!-- ================= SOCIAL LINKS ================= -->
+
+        <div class="magic-socials">
+
+          <!-- Instagram -->
+          <a
+            href="developer_melina"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="magic-social"
+            aria-label="Instagram"
+          >
+
+           <svg viewBox="0 0 32 32" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <circle cx="22.4056" cy="9.5944" r="1.44" />
+    <path d="M16 9.8378A6.1622 6.1622 0 1 0 22.1622 16 6.1622 6.1622 0 0 0 16 9.8378zM16 20a4 4 0 1 1 4-4 4 4 0 0 1-4 4z" />
+    <path d="M16 6.1622c3.2041 0 3.5837 0.0122 4.849 0.07a6.6418 6.6418 0 0 1 2.2283 0.4132 3.9748 3.9748 0 0 1 2.2774 2.2774 6.6418 6.6418 0 0 1 0.4132 2.2283c0.0577 1.2653 0.07 1.6449 0.07 4.849s-0.0122 3.5837-0.07 4.849a6.6418 6.6418 0 0 1-0.4132 2.2283 3.9748 3.9748 0 0 1-2.2774 2.2774 6.6418 6.6418 0 0 1-2.2283 0.4132c-1.2652 0.0577-1.6446 0.07-4.849 0.07s-3.5838-0.0122-4.849-0.07a6.6418 6.6418 0 0 1-2.2283-0.4132 3.9748 3.9748 0 0 1-2.2774-2.2774 6.6418 6.6418 0 0 1-0.4132-2.2283c-0.0577-1.2653-0.07-1.6449-0.07-4.849s0.0122-3.5837 0.07-4.849a6.6418 6.6418 0 0 1 0.4132-2.2283 3.9748 3.9748 0 0 1 2.2774-2.2775 6.6418 6.6418 0 0 1 2.2283-0.4132c1.2653-0.0577 1.6449-0.07 4.849-0.07M16 4c-3.259 0-3.6677 0.0138-4.9476 0.0722A8.8068 8.8068 0 0 0 8.14 4.63 6.1363 6.1363 0 0 0 4.63 8.14a8.8068 8.8068 0 0 0-0.5578 2.9129C4.0138 12.3323 4 12.741 4 16s0.0138 3.6677 0.0722 4.9476A8.8074 8.8074 0 0 0 4.63 23.8605a6.1363 6.1363 0 0 0 3.51 3.51 8.8068 8.8068 0 0 0 2.9129 0.5578C12.3323 27.9862 12.741 28 16 28s3.6677-0.0138 4.9476-0.0722a8.8074 8.8074 0 0 0 2.9129-0.5578 6.1363 6.1363 0 0 0 3.51-3.51 8.8074 8.8074 0 0 0 0.5578-2.9129C27.9862 19.6677 28 19.259 28 16s-0.0138-3.6677-0.0722-4.9476A8.8068 8.8068 0 0 0 27.37 8.14a6.1363 6.1363 0 0 0-3.51-3.5095 8.8074 8.8074 0 0 0-2.9129-0.5578C19.6677 4.0138 19.259 4 16 4z" />
+</svg>
+
+            <span>Instagram</span>
+
+          </a>
+
+
+          <!-- Email -->
+          <a
+            href="mailto:melinajdt@gmail.com"
+            class="magic-social"
+            aria-label="Email"
+          >
+
+           <svg viewBox="0 0 32 32" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zM25.8 8 16 14.78 6.2 8zM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24z" />
+</svg>
+
+            <span>Email</span>
+
+          </a>
+
+
+          <!-- LinkedIn -->
+          <a
+            href="melinajodt"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="magic-social"
+            aria-label="LinkedIn"
+          >
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.83C21 10.06 18.99 8.3 16.31 8.3c-2.18 0-3.15 1.2-3.7 2.04V8.5H9.1V21h3.51v-6.19c0-1.63.31-3.2 2.32-3.2 1.98 0 2 1.85 2 3.3V21H21v-7.17Z"></path>
+            </svg>
+
+            <span>LinkedIn</span>
+
+          </a>
+
+
+          <!-- GitHub -->
+          <a
+            href="melinajdt"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="magic-social"
+            aria-label="GitHub"
+          >
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .7a11.3 11.3 0 0 0-3.57 22c.57.1.78-.25.78-.55v-2.13c-3.18.69-3.85-1.34-3.85-1.34-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.54-.29-5.21-1.27-5.21-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.13 1.17a10.9 10.9 0 0 1 5.7 0c2.17-1.48 3.13-1.17 3.13-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.39-2.68 5.35-5.23 5.64.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"></path>
+            </svg>
+
+            <span>GitHub</span>
+
+          </a>
+
+        </div>
+
+
+        <!-- Signature -->
+        <div class="magic-signature">
+          <span></span>
+          Made with a little bit of magic
+          <b>✦</b>
+          <span></span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+ 
+
+
+  
+
+
+
+
+ 
+
+</body>
+
+</html>

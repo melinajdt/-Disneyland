@@ -1,0 +1,1290 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Nunito Sans', system-ui, sans-serif;
+  --font-heading: 'Montserrat', system-ui, sans-serif;
+  --font-display: 'Fredoka One', 'Montserrat', cursive;
+
+  --color-disney-blue: #113CCF;
+  --color-disney-light-blue: #BFF5FD;
+  --color-disney-navy: #01147C;
+  --color-disney-red: #E41B13;
+  --color-disney-gold: #F4D726;
+  --color-disney-gray: #F5F5F5;
+  --color-disney-dark: #333333;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-disney-dark);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+}
+
+@layer components {
+
+  /* ─── کارت پارک (عکس + بج) ─── */
+  .park-card {
+    @apply relative block rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl cursor-pointer;
+  }
+
+
+  /* ─── رپر عکس برای زوم هاور ─── */
+  .park-card-img-wrapper {
+    @apply w-full h-full overflow-hidden;
+  }
+
+
+  /* ─── خود عکس ─── */
+  .park-card-img {
+    @apply w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105;
+  }
+
+
+
+  /* ─── لایه گرادیان روی عکس موقع هاور ─── */
+  .park-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none;
+  }
+
+
+
+  /* ─── بج رنگی گوشه بالا-چپ ─── */
+  .park-badge {
+    @apply absolute top-0 left-0 px-4 sm:px-5 py-3 rounded-br-2xl text-white flex flex-col gap-0.5 z-10;
+  }
+
+
+
+  .park-badge-title {
+    @apply font-heading font-bold text-base sm:text-lg lg:text-xl leading-tight;
+  }
+
+  .park-badge-location {
+    @apply inline-flex items-center gap-1.5 font-sans font-medium text-xs sm:text-sm;
+  }
+
+
+
+
+
+
+  /* ─── محتوای متنی کارت‌ها ─── */
+  .feature-title {
+    @apply font-heading font-bold text-2xl sm:text-3xl text-disney-dark mb-3 sm:mb-4 leading-tight;
+  }
+
+  .feature-desc {
+    @apply font-sans text-base sm:text-lg text-gray-700 mb-5 sm:mb-6 leading-relaxed;
+  }
+
+
+
+  /* ─── کادر عکس کارت‌ها ─── */
+  .feature-img {
+    @apply w-full rounded-2xl overflow-hidden shadow-lg;
+  }
+
+  .feature-img img {
+    @apply w-full h-auto object-cover block;
+  }
+
+  /* ─── عنوان سکشن ─── */
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl text-disney-dark text-center mb-10 sm:mb-14;
+  }
+
+  /* * ─── لینک آبی متنی ─── */
+  .link-blue {
+    @apply font-heading font-semibold text-sm sm:text-base text-disney-blue hover:text-disney-navy transition-colors lg:ml-4;
+
+  }
+
+  .btn-teal {
+  @apply inline-flex items-center justify-center gap-2
+  px-8 py-3.5
+  rounded-full
+  font-heading font-semibold
+  text-sm sm:text-base
+  text-white
+  bg-disney-blue
+  hover:bg-disney-navy
+  transition-all duration-200
+  shadow-md hover:shadow-lg
+  hover:-translate-y-0.5
+  w-full lg:w-auto
+  mb-4;
+}
+
+  .btn-hero {
+    @apply w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full font-heading font-semibold text-sm sm:text-base text-white border-2 border-white/80 bg-gradient-to-r from-[#1a7a8d] to-[#2a9db5] hover:from-[#156a7a] hover:to-[#238da3] transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .btn-disney {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-heading font-semibold text-sm transition-all duration-200 cursor-pointer border-none;
+  }
+
+  .btn-disney-blue {
+    @apply bg-disney-blue text-white;
+  }
+
+  .btn-disney-blue:hover {
+    @apply bg-disney-navy -translate-y-0.5;
+    box-shadow: 0 4px 12px rgba(17, 60, 207, 0.3);
+  }
+
+  .btn-disney-red {
+    @apply bg-disney-red text-white;
+  }
+
+  .btn-disney-red:hover {
+    @apply bg-[#C41810] -translate-y-0.5;
+    box-shadow: 0 4px 12px rgba(228, 27, 19, 0.3);
+  }
+
+  .btn-disney-gold {
+    @apply bg-disney-gold text-disney-navy;
+  }
+
+  .btn-disney-gold:hover {
+    @apply bg-[#E5C820] -translate-y-0.5;
+  }
+
+  .card-disney {
+    @apply bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300;
+  }
+
+  .card-disney:hover {
+    @apply shadow-xl -translate-y-1;
+  }
+
+  .badge-disney {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+  }
+
+  .nav-link {
+    @apply font-heading font-semibold text-sm text-disney-dark hover:text-disney-blue transition-colors;
+  }
+
+
+/* ================= FOOTER ================= */
+
+.footer-link {
+  @apply inline-block text-[#18375A] transition-colors duration-200;
+}
+
+.footer-link:hover {
+  @apply text-disney-blue underline underline-offset-4;
+}
+
+
+.footer-nav-link {
+  @apply text-sm font-sans text-[#18375A] transition-colors duration-200;
+}
+
+.footer-nav-link:hover {
+  @apply text-disney-blue underline underline-offset-4;
+}
+
+
+.social-link {
+  @apply text-[#18375A] transition-colors duration-200;
+}
+
+.social-link:hover {
+  @apply text-disney-blue;
+}
+
+
+
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .gradient-blue {
+    background: linear-gradient(135deg, #113CCF 0%, #01147C 100%);
+  }
+}
+
+
+
+
+/* =========================================================
+   MY LITTLE MAGIC
+   ========================================================= */
+
+.my-magic {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(105, 91, 180, 0.30),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(244, 174, 215, 0.16),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #061338 0%,
+      #091b46 48%,
+      #111b50 100%
+    );
+
+  color: white;
+}
+
+
+/* =========================================================
+   BACKGROUND STARS
+   ========================================================= */
+
+.magic-star {
+  position: absolute;
+
+  color: #f8c9e5;
+
+  pointer-events: none;
+
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 12px #f8c9e5,
+    0 0 25px rgba(248, 201, 229, .75);
+
+  animation: magicTwinkle 2.6s ease-in-out infinite;
+}
+
+
+/* Star positions */
+
+.star-1 {
+  top: 14%;
+  left: 7%;
+  font-size: 1.2rem;
+}
+
+.star-2 {
+  top: 28%;
+  left: 18%;
+  font-size: .7rem;
+  animation-delay: .5s;
+}
+
+.star-3 {
+  top: 11%;
+  right: 11%;
+  font-size: 1.5rem;
+  animation-delay: 1s;
+}
+
+.star-4 {
+  top: 63%;
+  right: 7%;
+  font-size: .8rem;
+  animation-delay: 1.4s;
+}
+
+.star-5 {
+  bottom: 15%;
+  left: 8%;
+  font-size: 1.3rem;
+  animation-delay: .8s;
+}
+
+.star-6 {
+  bottom: 22%;
+  left: 31%;
+  font-size: .7rem;
+  animation-delay: 1.7s;
+}
+
+.star-7 {
+  bottom: 12%;
+  right: 23%;
+  font-size: 1rem;
+  animation-delay: 2s;
+}
+
+.star-8 {
+  top: 48%;
+  right: 34%;
+  font-size: .6rem;
+  animation-delay: 1.2s;
+}
+
+.star-9 {
+  top: 72%;
+  left: 47%;
+  font-size: .75rem;
+  animation-delay: .3s;
+}
+
+.star-10 {
+  top: 20%;
+  right: 32%;
+  font-size: .65rem;
+  animation-delay: 1.8s;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.my-magic-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding: 60px 24px 65px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.magic-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 40px;
+
+  color: #f8d8e9;
+
+  font-family: var(--font-heading);
+
+  font-size: .65rem;
+
+  font-weight: 700;
+
+  letter-spacing: .22em;
+}
+
+
+.magic-label span:first-child,
+.magic-label span:last-child {
+  color: #f8c9e5;
+
+  text-shadow:
+    0 0 8px #ffffff,
+    0 0 15px #f8c9e5,
+    0 0 25px rgba(248, 201, 229, .8);
+
+  animation: magicTwinkle 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.my-magic-content {
+  display: grid;
+
+  grid-template-columns: 235px 1fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+
+/* =========================================================
+   PHOTO AREA
+   ========================================================= */
+
+.magic-photo-area {
+  position: relative;
+
+  width: 215px;
+  height: 215px;
+
+  margin: auto;
+}
+
+
+/* =========================================================
+   MICKEY EARS
+   ========================================================= */
+
+.mickey-ear {
+  position: absolute;
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  border: 3px solid rgba(255, 255, 255, .95);
+
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, .18),
+    0 0 25px rgba(248, 201, 229, .20);
+
+  z-index: 1;
+}
+
+
+.ear-left {
+  top: 2px;
+  left: 20px;
+}
+
+
+.ear-right {
+  top: 2px;
+  right: 20px;
+}
+
+
+/* =========================================================
+   PHOTO
+   ========================================================= */
+
+.magic-photo {
+  position: absolute;
+
+  left: 50%;
+  top: 35px;
+
+  transform: translateX(-50%);
+
+  width: 165px;
+  height: 165px;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  border: 4px solid white;
+
+  background: #172d62;
+
+  box-shadow:
+    0 0 0 3px rgba(248, 201, 229, .30),
+    0 0 28px rgba(248, 201, 229, .40),
+    0 15px 40px rgba(0, 0, 0, .28);
+
+  z-index: 3;
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+}
+
+
+.magic-photo:hover {
+  transform:
+    translateX(-50%)
+    translateY(-5px)
+    scale(1.04);
+
+  box-shadow:
+    0 0 0 4px rgba(255, 220, 239, .55),
+    0 0 40px rgba(248, 201, 229, .70),
+    0 18px 45px rgba(0, 0, 0, .35);
+}
+
+
+.magic-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   PHOTO SHINE
+   ========================================================= */
+
+.magic-photo-shine {
+  position: absolute;
+
+  top: -100%;
+  left: -80%;
+
+  width: 45%;
+  height: 260%;
+
+  transform: rotate(25deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 220, 239, .55),
+      transparent
+    );
+
+  pointer-events: none;
+
+  transition: left .8s ease;
+}
+
+
+.magic-photo:hover .magic-photo-shine {
+  left: 135%;
+}
+
+
+/* =========================================================
+   PHOTO SPARKLES
+   ========================================================= */
+
+.photo-glitter {
+  position: absolute;
+
+  z-index: 6;
+
+  color: #f8c9e5;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #f8c9e5,
+    0 0 20px #f3a9d3;
+
+  transform: scale(.2);
+}
+
+
+.magic-photo-area:hover .photo-glitter {
+  animation: photoSparkle .9s ease-out forwards;
+}
+
+
+.pg-1 {
+  left: 12px;
+  top: 80px;
+
+  --sparkle-x: -30px;
+  --sparkle-y: -20px;
+}
+
+
+.pg-2 {
+  left: 30px;
+  top: 38px;
+
+  --sparkle-x: -22px;
+  --sparkle-y: -38px;
+
+  animation-delay: .08s !important;
+}
+
+
+.pg-3 {
+  left: 78px;
+  top: 5px;
+
+  --sparkle-x: 0;
+  --sparkle-y: -45px;
+
+  animation-delay: .16s !important;
+}
+
+
+.pg-4 {
+  right: 20px;
+  top: 38px;
+
+  --sparkle-x: 25px;
+  --sparkle-y: -38px;
+
+  animation-delay: .24s !important;
+}
+
+
+.pg-5 {
+  right: 8px;
+  top: 102px;
+
+  --sparkle-x: 35px;
+  --sparkle-y: -5px;
+
+  animation-delay: .32s !important;
+}
+
+
+.pg-6 {
+  right: 38px;
+  bottom: 20px;
+
+  --sparkle-x: 25px;
+  --sparkle-y: 25px;
+
+  animation-delay: .4s !important;
+}
+
+
+.pg-7 {
+  left: 38px;
+  bottom: 18px;
+
+  --sparkle-x: -25px;
+  --sparkle-y: 25px;
+
+  animation-delay: .48s !important;
+}
+
+
+.pg-8 {
+  left: 4px;
+  top: 125px;
+
+  --sparkle-x: -38px;
+  --sparkle-y: 5px;
+
+  animation-delay: .56s !important;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.magic-text {
+  position: relative;
+}
+
+
+.magic-name {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+
+  color: white;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  line-height: 1;
+
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, .25);
+}
+
+
+.magic-name span {
+  position: absolute;
+
+  top: -13px;
+  right: -24px;
+
+  color: #f8c9e5;
+
+  font-size: 1rem;
+
+  text-shadow:
+    0 0 8px #ffffff,
+    0 0 18px #f8c9e5,
+    0 0 28px rgba(248, 201, 229, .8);
+
+  animation: magicTwinkle 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FRONT-END DEVELOPER
+   ========================================================= */
+
+.magic-description {
+  max-width: 510px;
+
+  margin: 18px 0 22px;
+
+  color: rgba(255, 255, 255, .80);
+
+  font-family: var(--font-sans);
+
+  font-size: .95rem;
+
+  line-height: 1.8;
+}
+
+
+.pink-sparkle {
+  display: inline-block;
+
+  margin-left: 6px;
+
+  color: #f8c9e5;
+
+  font-size: 1rem;
+
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #f8c9e5,
+    0 0 18px rgba(248, 201, 229, .85);
+
+  animation: pinkSparkle 1.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.magic-socials {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.magic-social {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 44px;
+  height: 44px;
+
+  padding: 0 14px;
+
+  overflow: visible;
+
+  /* Soft pink border */
+  border: 1px solid rgba(248, 201, 229, .38);
+
+  border-radius: 999px;
+
+  /* Soft pink background */
+  background: rgba(248, 201, 229, .12);
+
+  color: #fff;
+
+  font-family: var(--font-heading);
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+
+/* Social SVG */
+
+.magic-social svg {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+
+  fill: currentColor;
+}
+
+
+/* =========================================================
+   SOCIAL HOVER
+   ========================================================= */
+
+.magic-social:hover {
+
+  transform:
+    translateY(-5px)
+    scale(1.05);
+
+  /* Pink background */
+  background:
+    linear-gradient(
+      135deg,
+      rgba(248, 201, 229, .38),
+      rgba(255, 224, 241, .24)
+    );
+
+  /* Neon pink border */
+  border-color: #f8c9e5;
+
+  /* Neon pink glow */
+  box-shadow:
+    0 0 8px rgba(248, 201, 229, .75),
+    0 0 18px rgba(248, 201, 229, .65),
+    0 0 35px rgba(248, 201, 229, .38);
+
+  color: white;
+}
+
+
+/* =========================================================
+   SOCIAL GLITTER
+   ========================================================= */
+
+.magic-social::before,
+.magic-social::after {
+
+  content: "✦ ✧ ✦ ✧";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 100px;
+
+  color: #f8c9e5;
+
+  font-size: 8px;
+
+  letter-spacing: 15px;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #f8c9e5,
+    0 0 18px #f3a9d3;
+
+  transform:
+    translate(-50%, -50%)
+    scale(.2);
+}
+
+
+/* First glitter direction */
+
+.magic-social:hover::before {
+  animation:
+    socialGlitterOne
+    .8s
+    ease-out
+    forwards;
+}
+
+
+/* Second glitter direction */
+
+.magic-social:hover::after {
+  animation:
+    socialGlitterTwo
+    .8s
+    ease-out
+    .08s
+    forwards;
+}
+
+
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
+
+.magic-signature {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 23px;
+
+  color: rgba(255, 255, 255, .5);
+
+  font-family: var(--font-sans);
+
+  font-size: .65rem;
+
+  font-style: italic;
+}
+
+
+.magic-signature span {
+
+  width: 28px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(248, 201, 229, .45)
+    );
+}
+
+
+.magic-signature span:last-of-type {
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248, 201, 229, .45),
+      transparent
+    );
+}
+
+
+.magic-signature b {
+
+  color: #f8c9e5;
+
+  text-shadow:
+    0 0 8px #f8c9e5,
+    0 0 18px rgba(248, 201, 229, .7);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes magicTwinkle {
+
+  0%,
+  100% {
+    opacity: .35;
+
+    transform:
+      scale(.75)
+      rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1.25)
+      rotate(12deg);
+  }
+}
+
+
+@keyframes pinkSparkle {
+
+  0%,
+  100% {
+    opacity: .45;
+
+    transform:
+      scale(.8)
+      rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1.25)
+      rotate(15deg);
+  }
+}
+
+
+@keyframes photoSparkle {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translate(0, 0)
+      scale(.2)
+      rotate(0);
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translate(
+        var(--sparkle-x, 0),
+        var(--sparkle-y, -30px)
+      )
+      scale(1.25)
+      rotate(35deg);
+  }
+}
+
+
+@keyframes socialGlitterOne {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(.2)
+      rotate(0);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translate(-50%, -90px)
+      scale(1.5)
+      rotate(25deg);
+  }
+}
+
+
+@keyframes socialGlitterTwo {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(.2)
+      rotate(0);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translate(20px, -65px)
+      scale(1.3)
+      rotate(-30deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .my-magic-inner {
+    padding: 55px 20px 60px;
+  }
+
+
+  .my-magic-content {
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    text-align: center;
+  }
+
+
+  .magic-photo-area {
+
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .magic-photo {
+
+    width: 155px;
+    height: 155px;
+
+    top: 36px;
+  }
+
+
+  .mickey-ear {
+
+    width: 66px;
+    height: 66px;
+  }
+
+
+  .ear-left {
+    left: 20px;
+  }
+
+
+  .ear-right {
+    right: 20px;
+  }
+
+
+  .magic-socials {
+    justify-content: center;
+  }
+
+
+  .magic-description {
+
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .magic-signature {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .my-magic-inner {
+
+    padding:
+      48px
+      18px
+      52px;
+  }
+
+
+  .magic-label {
+
+    font-size: .55rem;
+
+    letter-spacing: .16em;
+
+    margin-bottom: 32px;
+  }
+
+
+  .magic-photo-area {
+
+    width: 175px;
+    height: 175px;
+  }
+
+
+  .magic-photo {
+
+    width: 138px;
+    height: 138px;
+
+    top: 35px;
+
+    border-width: 3px;
+  }
+
+
+  .mickey-ear {
+
+    width: 58px;
+    height: 58px;
+
+    border-width: 2px;
+  }
+
+
+  .ear-left {
+    left: 17px;
+  }
+
+
+  .ear-right {
+    right: 17px;
+  }
+
+
+  .magic-name {
+    font-size: 2.7rem;
+  }
+
+
+  .magic-description {
+    font-size: .88rem;
+  }
+
+
+  .magic-social span {
+    display: none;
+  }
+
+
+  .magic-social {
+
+    width: 44px;
+
+    padding: 0;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .magic-star,
+  .magic-label span,
+  .magic-name span,
+  .photo-glitter,
+  .pink-sparkle {
+
+    animation: none;
+  }
+
+
+  .magic-photo,
+  .magic-social {
+
+    transition: none;
+  }
+}
